@@ -1,7 +1,8 @@
 # Movie-Recommender-with-Some-Visualisation
 Movie Recommender with Some Visualizations
 This project is a Movie Recommendation System with integrated data visualizations to provide insights into the dataset. 
-The application uses collaborative filtering and genre similarity matrices to recommend movies based on user inputs. Below is a detailed overview of the data visualizations, insights, and the machine learning models implemented.
+The application uses collaborative filtering and genre similarity matrices to recommend movies based on user inputs. Below is a detailed overview of the data visualizations, 
+insights, and the machine learning models implemented.
 
 Project Overview
 The main aim of this project is to create a movie recommendation system using collaborative filtering and genre similarity. Additionally, it includes various data visualizations to better understand user preferences and movie ratings.
