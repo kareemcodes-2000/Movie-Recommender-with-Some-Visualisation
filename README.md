@@ -8,77 +8,65 @@ The main aim of this project is to create a movie recommendation system using co
 ## Visualizations & Insights
 
 ### 1. Distribution of Movie Ratings
-![Distribution of Movie Ratings](images/Distribution_of_Movie_Ratings.png)
+![Distribution of Movie Ratings](images/Distribution%20of%20Movie%20Ratings.PNG)
 
-**Insight**:  
+**Insight:**  
 The distribution shows how users perceive movies overall. Higher peaks around higher ratings suggest that most users rate movies favorably, indicating a general satisfaction with movie quality.
 
-### 2. Top 10 Movies by Rating Count
-![Top 10 Movies by Rating Count](images/Top_10_Movies_by_Rating_Count.png)
+---
 
-**Insight**:  
+### 2. Top 10 Movies by Rating Count
+![Top 10 Movies by Rating Count](images/Top%2010%20Movies%20By%20Rating%20Count.PNG)
+
+**Insight:**  
 The top movies by rating count indicate the most popular movies that have a large number of users rating them. This shows which movies have widespread appeal and a large viewer base.
 
+---
+
 ### 3. Genre Distribution of Movies
-![Genre Distribution of Movies](images/Genre_Distribution_of_Movies.png)
+![Genre Distribution of Movies](images/Genre%20Distribution%20of%20Movies.PNG)
 
-**Insight**:  
-This pie chart shows the distribution of genres among movies. Certain genres like Drama and Comedy dominate the distribution, indicating their popularity and frequency in the dataset. Lesser-known genres like Film-Noir and IMAX are niche genres with fewer entries.
+**Insight:**  
+This table shows the distribution of genres among movies. Certain genres like Drama and Comedy dominate the distribution, indicating their popularity and frequency in the dataset. Lesser-known genres like Film-Noir and IMAX are niche genres with fewer entries.
 
-### 4. Average Ratings by Genre
-![Average Ratings by Genre](images/Average_Ratings_by_Genre.png)
+---
 
-**Insight**:  
+### 4. Genre Distribution of Movies (Pie Chart)
+![Genre Distribution of Movies Pie Chart](images/Genre%20Distribution%20of%20Movies%20Pie%20Chart.PNG)
+
+**Insight:**  
+This pie chart visualizes the percentage distribution of genres. Certain genres dominate the distribution, while others are less common.
+
+---
+
+### 5. Average Ratings by Genre
+![Average Ratings Per Genre](images/Average%20Ratings%20Per%20Genre.PNG)
+
+**Insight:**  
 This bar plot highlights the average ratings for each genre, showing which genres are generally rated higher by the audience. Genres like Film-Noir, War, and Documentary tend to receive higher average ratings, while genres like Horror and Comedy receive lower ratings.
+
+---
 
 ## Machine Learning Models Used
 
-### Collaborative Filtering (Model 1)
-- **Description**:  
-  Collaborative filtering is used to recommend movies based on user-item interactions. This model predicts ratings by taking into account similar users' preferences.
-  
-- **Algorithm**:  
-  The implementation uses the **Singular Value Decomposition (SVD)** algorithm from the Surprise library to predict movie ratings.
-  
-- **Output**:  
-  The collaborative filtering model outputs a list of movies that are most likely to be of interest to the user based on their past preferences.
+### **Collaborative Filtering (Model 1)**  
+**Description:**  
+Collaborative filtering is used to recommend movies based on user-item interactions. This model predicts ratings by taking into account similar users' preferences.
 
-### Genre Similarity Matrix (Model 2)
-- **Description**:  
-  The genre similarity matrix model recommends movies based on similarity in genre features. This is useful for users who are looking for similar movies to a particular one they enjoyed.
-  
-- **Implementation**:  
-  The model uses a cosine similarity matrix calculated based on the genre features of each movie.
-  
-- **Output**:  
-  A list of movies that are most similar in genre to the selected movie.
+**Algorithm:**  
+The implementation uses the Singular Value Decomposition (SVD) algorithm from the Surprise library to predict movie ratings.
 
-## How to Use the Movie Recommender System
+**Output:**  
+The collaborative filtering model outputs a list of movies that are most likely to be of interest to the user based on their past preferences.
 
-### Interface Overview
-1. **Search for a Movie**:
-   - Enter a movie title or Movie ID to look up movies in the dataset.
-   - Choose the movie from the results to get started.
+---
 
-2. **Choose Recommendation Method**:
-   - **Collaborative Filtering**: Recommends movies based on user ratings.
-   - **Genre Similarity Matrix**: Recommends movies similar in genre to the selected one.
+### **Genre Similarity Matrix (Model 2)**  
+**Description:**  
+The Genre Similarity Matrix is based on the genres associated with each movie. This model computes the similarity between different movies based on their genre metadata.
 
-3. **View Recommendations**:
-   - See a list of recommended movies based on the selected method.
-   - Each recommendation is accompanied by its title and ID for reference.
+**Algorithm:**  
+A similarity matrix is generated using cosine similarity, and the closest matching movies are recommended based on the genre structure.
 
-## Project Structure
-- `images/`: Contains all images used in this README for visualizations.
-- `Model 1 (CF).py`: Script for Collaborative Filtering Model.
-- `Model 2 (GSM).py`: Script for Genre Similarity Model.
-- `Preprocessed Data.py`: Script for cleaning and processing the raw data.
-- `datavis.py`: Script for generating visualizations and insights.
-- `maincode.py`: The main script for the movie recommendation system.
-- `README.md`: Project documentation file.
-- `index.html`: A simple portfolio site showcasing the project.
-
-## How to Run the Project Locally
-1. Clone the repository to your local machine:
-   ```bash
-   git clone https://github.com/kareemcodes-2000/Movie-Recommender-with-Some-Visualisation.git
+**Output:**  
+The genre similarity model outputs a list of movies that are similar to the selected movie based on genre composition.
